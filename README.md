@@ -257,7 +257,24 @@ IoT-Underground-Cable-Fault-Detection/
 
 ## Hardware Setup
 
-<img width="1493" height="1600" alt="Hardware_Setup jpg" src="https://github.com/user-attachments/assets/8ee2402e-60f2-48fd-a419-f66385a93103" />
+<img width="1422" height="1457" alt="Hardware_Setup jpg" src="https://github.com/user-attachments/assets/d16c37dd-fd83-40d1-b7f9-93b533ec05da" />
+
+The figure below shows the complete hardware prototype developed for the IoT-Based Underground Cable Fault Detection System.
+
+### Hardware Description
+
+The hardware prototype consists of:
+
+- Arduino UNO (Main Controller)
+- ESP8266 NodeMCU (IoT Communication)
+- 16×2 I2C LCD Display
+- Relay Modules for Three-Phase Cable Simulation
+- LED Status Indicators
+- Piezo Buzzer
+- SPDT Switches for Fault Simulation
+- DC Power Supply Module
+- Custom PCB for Driver Circuit
+
 
 
 ---
