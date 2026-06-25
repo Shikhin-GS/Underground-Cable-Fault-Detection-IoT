@@ -257,7 +257,8 @@ IoT-Underground-Cable-Fault-Detection/
 
 ## Hardware Setup
 
-(Add hardware image here)
+<img width="1493" height="1600" alt="Hardware_Setup jpg" src="https://github.com/user-attachments/assets/8ee2402e-60f2-48fd-a419-f66385a93103" />
+
 
 ---
 
