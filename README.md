@@ -258,13 +258,10 @@ IoT-Underground-Cable-Fault-Detection/
 ## Hardware Setup
 
 <img width="711" height="728" alt="Hardware_Setup jpg" src="https://github.com/user-attachments/assets/d16c37dd-fd83-40d1-b7f9-93b533ec05da" />
-
-The figure below shows the complete hardware prototype developed for the IoT-Based Underground Cable Fault Detection System.
+**Figure 1:** Complete hardware prototype of the IoT-Based Underground Cable Fault Detection System.
 
 ### Hardware Description
-
 The hardware prototype consists of:
-
 - Arduino UNO (Main Controller)
 - ESP8266 NodeMCU (IoT Communication)
 - 16×2 I2C LCD Display
@@ -275,41 +272,145 @@ The hardware prototype consists of:
 - DC Power Supply Module
 - Custom PCB for Driver Circuit
 
+# ⚙ Hardware Operation
 
+The Arduino UNO continuously monitors the simulated underground cable network through relay-controlled cable lines. Fault conditions are manually generated using the switch panel. Once a fault is detected, the firmware calculates the approximate fault distance using ADC measurements based on Ohm's Law.
+
+The calculated fault information is:
+- Displayed on the 16×2 LCD
+- Indicated through LEDs and buzzer
+- Sent to the ESP8266 NodeMCU
+- Uploaded to the Blynk Cloud for remote monitoring
 
 ---
 
 ## Circuit Diagram
 
-(Add circuit diagram here)
+<img width="711" height="728" alt="Circuit_Diagram png" src="https://github.com/user-attachments/assets/42bfff0e-67d0-4600-9001-68cd0ae6bcb0" />
+
+# Circuit Diagram
+
+The following schematic illustrates the complete electrical connections of the IoT-Based Underground Cable Fault Detection System.
+
+### Circuit Description
+
+The system consists of an Arduino UNO as the main controller, interfaced with three relay modules that simulate three underground cable phases (R, Y, and B). A resistor network is used to represent cable resistance, enabling fault distance estimation using Ohm's Law.
+
+The Arduino continuously samples the voltage through its Analog-to-Digital Converter (ADC), calculates the fault distance, and displays the results on a 16×2 I2C LCD.
+
+An ESP8266 NodeMCU communicates with the Arduino through serial communication and uploads fault information to the Blynk IoT Cloud. A buzzer and LED indicators provide immediate local alerts whenever a fault is detected.
+
+## Hardware Connections
+
+| Component | Interface |
+|----------|-----------|
+| Arduino UNO | Main Controller |
+| ESP8266 NodeMCU | UART Communication |
+| LCD 16×2 (I2C) | SDA, SCL |
+| Relay Modules | Digital Output Pins |
+| LED Indicators | Digital Output Pins |
+| Buzzer | Digital Output Pin |
+| Cable Resistance Network | Analog Input (ADC) |
+| Power Supply Module | 5V / 12V DC |
+
+## Embedded System Highlights
+
+- Embedded C firmware developed for Arduino UNO
+- ADC-based voltage measurement
+- Ohm's Law based fault distance calculation
+- UART communication between Arduino UNO and ESP8266
+- I2C communication with 16×2 LCD
+- Relay-based three-phase cable simulation
+- Real-time IoT monitoring using Blynk Cloud
+- Local fault indication using LEDs and buzzer
+
+## Pin Configuration
+
+| Device | Connection |
+|---------|------------|
+| LCD | I2C (SDA, SCL) |
+| ESP8266 | UART (TX/RX) |
+| Relay 1 | Digital Output |
+| Relay 2 | Digital Output |
+| Relay 3 | Digital Output |
+| LEDs | Digital Output |
+| Buzzer | Digital Output |
+| Cable Network | Analog Input |
 
 ---
 
 ## LCD Output
+<img width="1503" height="1600" alt="LCD_Fault jpg" src="https://github.com/user-attachments/assets/321fb29b-5560-44ad-8903-9345f7eca20c" />
+# 📟 LCD Output
 
-(Add LCD image here)
+The system displays the detected fault location and the corresponding cable phase on a 16×2 I2C LCD.
+
+## Y Phase Fault
+
+![LCD Y Fault](Images/LCD_Y_Fault.jpg)
+
+The LCD indicates that the **Yellow (Y) phase** has a fault located approximately **6 km** from the feeder station.
+
+---
+
+## B Phase Fault
+
+![LCD B Fault](Images/LCD_B_Fault.jpg)
+
+The LCD indicates that the **Blue (B) phase** has a fault located approximately **7 km** from the feeder station.
+
+
 
 ---
 
 ## Blynk Dashboard
 
-(Add dashboard screenshot here)
+<img width="1486" height="1600" alt="Blynk_Dashboard jpg" src="https://github.com/user-attachments/assets/bcb00976-4131-43d2-8a35-67033ed567d3" />
+# 📱 Blynk IoT Dashboard
+
+The ESP8266 NodeMCU transmits real-time cable fault information to the Blynk Cloud Platform, allowing users to monitor the system remotely.
+
+![Blynk Dashboard](Images/Blynk_Dashboard.jpg)
+
+### Dashboard Features
+
+- Displays the detected fault distance.
+- Identifies the faulty cable phase.
+- Shows normal operating status when no fault exists.
+- Provides real-time monitoring through Wi-Fi.
+
 
 ---
 
-# Results
+# 📊 Experimental Results
 
-| Test                    | Status   |
-| ----------------------- | -------- |
-| Open Circuit Detection  | ✅ Passed |
-| Short Circuit Detection | ✅ Passed |
-| Line-to-Ground Fault    | ✅ Passed |
-| Line-to-Line Fault      | ✅ Passed |
-| LCD Display             | ✅ Passed |
-| Buzzer Alert            | ✅ Passed |
-| IoT Dashboard Update    | ✅ Passed |
-| Three-Phase Simulation  | ✅ Passed |
+The developed system successfully detected and localized faults in all three simulated underground cable phases.
 
+| Test Case | Result |
+|-----------|--------|
+| R Phase Fault | ✅ Detected Successfully |
+| Y Phase Fault | ✅ Detected Successfully |
+| B Phase Fault | ✅ Detected Successfully |
+| Fault Distance Calculation | ✅ Accurate |
+| LCD Display | ✅ Working |
+| LED Indication | ✅ Working |
+| Buzzer Alert | ✅ Working |
+| Blynk Cloud Update | ✅ Working |
+
+The embedded firmware accurately estimated the fault distance based on voltage measurements and uploaded the results to the Blynk IoT Cloud in real time.
+
+# Project Highlights
+
+- Embedded C Firmware Development
+- Arduino UNO Based Embedded System
+- ESP8266 IoT Integration
+- ADC-Based Fault Distance Calculation
+- UART Communication
+- I2C LCD Interface
+- Relay-Based Three-Phase Fault Simulation
+- Real-Time Cloud Monitoring
+- Hardware Validation
+- Functional Testing
 ---
 
 # Demonstration
@@ -354,6 +455,17 @@ A short demonstration video showing:
 * Arduino IDE
 
 ---
+## Lessons Learned
+
+This project strengthened my understanding of:
+
+- Embedded C programming
+- Microcontroller interfacing
+- ADC-based sensing
+- UART and I2C communication
+- IoT integration using ESP8266
+- Hardware debugging and testing
+- Firmware development and validation
 
 # Author
 
