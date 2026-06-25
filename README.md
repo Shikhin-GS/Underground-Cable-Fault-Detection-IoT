@@ -343,21 +343,12 @@ An ESP8266 NodeMCU communicates with the Arduino through serial communication an
 The system displays the detected fault location and the corresponding cable phase on a 16×2 I2C LCD.
 
 ## Y Phase Fault
-
-![LCD Y Fault](Images/LCD_Y_Fault.jpg)
-
 The LCD indicates that the **Yellow (Y) phase** has a fault located approximately **6 km** from the feeder station.
 
 ---
 
 ## B Phase Fault
-
-![LCD B Fault](Images/LCD_B_Fault.jpg)
-
 The LCD indicates that the **Blue (B) phase** has a fault located approximately **7 km** from the feeder station.
-
-
-
 ---
 
 ## Blynk Dashboard
@@ -365,9 +356,6 @@ The LCD indicates that the **Blue (B) phase** has a fault located approximately 
 <img width="1486" height="1600" alt="Blynk_Dashboard jpg" src="https://github.com/user-attachments/assets/bcb00976-4131-43d2-8a35-67033ed567d3" />
 
 The ESP8266 NodeMCU transmits real-time cable fault information to the Blynk Cloud Platform, allowing users to monitor the system remotely.
-
-![Blynk Dashboard](Images/Blynk_Dashboard.jpg)
-
 ### Dashboard Features
 
 - Displays the detected fault distance.
