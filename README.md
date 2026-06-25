@@ -257,7 +257,7 @@ IoT-Underground-Cable-Fault-Detection/
 
 ## Hardware Setup
 
-<img alt="Hardware_Setup jpg" src="https://github.com/user-attachments/assets/d16c37dd-fd83-40d1-b7f9-93b533ec05da" />
+<img width="711" height="728" alt="Hardware_Setup jpg" src="https://github.com/user-attachments/assets/d16c37dd-fd83-40d1-b7f9-93b533ec05da" />
 
 The figure below shows the complete hardware prototype developed for the IoT-Based Underground Cable Fault Detection System.
 
