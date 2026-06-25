@@ -273,7 +273,6 @@ The hardware prototype consists of:
 - Custom PCB for Driver Circuit
 
 # Hardware Operation
-
 The Arduino UNO continuously monitors the simulated underground cable network through relay-controlled cable lines. Fault conditions are manually generated using the switch panel. Once a fault is detected, the firmware calculates the approximate fault distance using ADC measurements based on Ohm's Law.
 
 The calculated fault information is:
@@ -281,7 +280,6 @@ The calculated fault information is:
 - Indicated through LEDs and buzzer
 - Sent to the ESP8266 NodeMCU
 - Uploaded to the Blynk Cloud for remote monitoring
-
 ---
 
 ## Circuit Diagram
@@ -344,7 +342,6 @@ The system displays the detected fault location and the corresponding cable phas
 
 ## Y Phase Fault
 The LCD indicates that the **Yellow (Y) phase** has a fault located approximately **6 km** from the feeder station.
-
 ---
 
 ## B Phase Fault
@@ -356,15 +353,15 @@ The LCD indicates that the **Blue (B) phase** has a fault located approximately 
 <img width="1486" height="1600" alt="Blynk_Dashboard jpg" src="https://github.com/user-attachments/assets/bcb00976-4131-43d2-8a35-67033ed567d3" />
 
 The ESP8266 NodeMCU transmits real-time cable fault information to the Blynk Cloud Platform, allowing users to monitor the system remotely.
-### Dashboard Features
 
+### Dashboard Features
 - Displays the detected fault distance.
 - Identifies the faulty cable phase.
 - Shows normal operating status when no fault exists.
 - Provides real-time monitoring through Wi-Fi.
 ---
 
-# 📊 Experimental Results
+# Experimental Results
 
 The developed system successfully detected and localized faults in all three simulated underground cable phases.
 
