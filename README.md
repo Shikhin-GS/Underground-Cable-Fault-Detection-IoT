@@ -22,15 +22,15 @@ This project demonstrates embedded firmware development, hardware interfacing, A
 
 # Features
 
-* ✅ Real-time underground cable fault detection
-* ✅ Fault distance estimation using Ohm's Law
-* ✅ 16×2 LCD display for local monitoring
-* ✅ Buzzer and LED alerts
-* ✅ IoT monitoring using ESP8266 and Blynk Cloud
-* ✅ Three-phase cable fault simulation
-* ✅ Embedded C firmware implementation
-* ✅ Modular low-level driver design
-* ✅ Reliable hardware validation and testing
+* Real-time underground cable fault detection
+* Fault distance estimation using Ohm's Law
+* 16×2 LCD display for local monitoring
+* Buzzer and LED alerts
+* IoT monitoring using ESP8266 and Blynk Cloud
+* Three-phase cable fault simulation
+* Embedded C firmware implementation
+* Modular low-level driver design
+* Reliable hardware validation and testing
 
 ---
 
@@ -258,7 +258,7 @@ IoT-Underground-Cable-Fault-Detection/
 ## Hardware Setup
 
 <img width="711" height="728" alt="Hardware_Setup jpg" src="https://github.com/user-attachments/assets/d16c37dd-fd83-40d1-b7f9-93b533ec05da" />
-**Figure 1:** Complete hardware prototype of the IoT-Based Underground Cable Fault Detection System.
+** Complete hardware prototype of the IoT-Based Underground Cable Fault Detection System.
 
 ### Hardware Description
 The hardware prototype consists of:
@@ -272,7 +272,7 @@ The hardware prototype consists of:
 - DC Power Supply Module
 - Custom PCB for Driver Circuit
 
-# ⚙ Hardware Operation
+# Hardware Operation
 
 The Arduino UNO continuously monitors the simulated underground cable network through relay-controlled cable lines. Fault conditions are manually generated using the switch panel. Once a fault is detected, the firmware calculates the approximate fault distance using ADC measurements based on Ohm's Law.
 
@@ -287,8 +287,6 @@ The calculated fault information is:
 ## Circuit Diagram
 
 <img width="711" height="728" alt="Circuit_Diagram png" src="https://github.com/user-attachments/assets/42bfff0e-67d0-4600-9001-68cd0ae6bcb0" />
-
-# Circuit Diagram
 
 The following schematic illustrates the complete electrical connections of the IoT-Based Underground Cable Fault Detection System.
 
@@ -341,7 +339,6 @@ An ESP8266 NodeMCU communicates with the Arduino through serial communication an
 
 ## LCD Output
 <img width="1503" height="1600" alt="LCD_Fault jpg" src="https://github.com/user-attachments/assets/321fb29b-5560-44ad-8903-9345f7eca20c" />
-# 📟 LCD Output
 
 The system displays the detected fault location and the corresponding cable phase on a 16×2 I2C LCD.
 
@@ -366,7 +363,6 @@ The LCD indicates that the **Blue (B) phase** has a fault located approximately 
 ## Blynk Dashboard
 
 <img width="1486" height="1600" alt="Blynk_Dashboard jpg" src="https://github.com/user-attachments/assets/bcb00976-4131-43d2-8a35-67033ed567d3" />
-# 📱 Blynk IoT Dashboard
 
 The ESP8266 NodeMCU transmits real-time cable fault information to the Blynk Cloud Platform, allowing users to monitor the system remotely.
 
@@ -378,8 +374,6 @@ The ESP8266 NodeMCU transmits real-time cable fault information to the Blynk Clo
 - Identifies the faulty cable phase.
 - Shows normal operating status when no fault exists.
 - Provides real-time monitoring through Wi-Fi.
-
-
 ---
 
 # 📊 Experimental Results
@@ -411,20 +405,6 @@ The embedded firmware accurately estimated the fault distance based on voltage m
 - Real-Time Cloud Monitoring
 - Hardware Validation
 - Functional Testing
----
-
-# Demonstration
-
-A short demonstration video showing:
-
-* Hardware setup
-* Fault simulation
-* LCD output
-* Buzzer activation
-* Real-time Blynk dashboard update
-
-(Add YouTube video link here.)
-
 ---
 
 # Future Improvements
